@@ -1,0 +1,25 @@
+{
+  "name": "Barebone",
+  "description": "Responsive framework for Frontend development written in SASS",
+  "version": "0.0.1",
+  "homepage": "https://github.com/BareboneFramework/barebone",
+  "authors": [
+    "Tine Jozelj <mentos1386@outlook.com>"
+  ],
+  "main": "sass/barebone.sass",
+  "keywords": [
+    "framework",
+    "sass",
+    "frontend",
+    "responsive",
+    "web"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
