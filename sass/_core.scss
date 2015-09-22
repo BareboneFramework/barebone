@@ -11,7 +11,7 @@
 //
 // ------------------------------
 
-@function color($color-name, $color-variant: 500, $color-pallet: $colors) {
+@function color($color-name, $color-variant: "500", $color-pallet: $colors) {
 
   // TODO: Add check if $color-pallet exists
   $color: map-get($color-pallet, $color-name);

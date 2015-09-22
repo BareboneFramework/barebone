@@ -111,3 +111,50 @@
   font-size: $caption-font-size-base;
   letter-spacing: 0.020em;
 }
+
+// ------------------------------
+// Small Heading
+// ------------------------------
+
+@mixin headingSmall($light: false) {
+  font-weight: 400;
+  font-size: 0.65em;
+  line-height: 1;
+
+  // Create variant for light or dark text
+  @if $light {
+    color: color('text-light', 'secondary');
+  } @else {
+    color: color('text-dark', 'secondary');
+  }
+}
+
+// If $light = true, generate light small headline
+@mixin generateHeadingSmall($light: false) {
+
+  $suffix: " ";
+  @if $light {
+    $suffix: ".text-light";
+  }
+
+  // Default Headings
+  @for $i from 1 to 6 {
+
+    .h#{$i $suffix} .small,
+    .h#{$i $suffix} small,
+    h#{$i $suffix} .small,
+    h#{$i $suffix} small {
+      @include headingSmall($light);
+    }
+  }
+
+  // Material Design Headings
+  @for $i from 1 to 4 {
+
+    .display-#{$i $suffix} .small,
+    .display-#{$i $suffix} small {
+      @include headingSmall($light);
+    }
+  }
+
+}

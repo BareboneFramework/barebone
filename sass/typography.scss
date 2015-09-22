@@ -18,30 +18,9 @@
   @include display-1;
 }
 
-.display-1 .small,
-.display-1 small,
-.display-2 .small,
-.display-2 small,
-.display-3 .small,
-.display-3 small,
-.display-4 .small,
-.display-4 small {
-  font-weight: 400;
-  font-size: 0.65em;
-  line-height: 1;
-  color: color('text-#{$text-color-scheme}', 'secondary');
-}
-
-.display-1.text-light .small,
-.display-1.text-light small,
-.display-2.text-light .small,
-.display-2.text-light small,
-.display-3.text-light .small,
-.display-3.text-light small,
-.display-4.text-light .small,
-.display-4.text-light small {
-  color: color('text-light', 'secondary');
-}
+// Generate small heading
+@include generateHeadingSmall();
+@include generateHeadingSmall(true);
 
 .headline {
   @include headline;
@@ -59,26 +38,32 @@ title,
 //--------------------
 // Default Headings
 //--------------------
+.h1,
 h1 {
   @include h1;
 }
 
+.h2,
 h2 {
   @include h2;
 }
 
+.h3,
 h3 {
   @include h3;
 }
 
+.h4,
 h4 {
   @include h4;
 }
 
+.h5,
 h5 {
   @include h5;
 }
 
+.h6,
 h6 {
   @include h6;
 }
