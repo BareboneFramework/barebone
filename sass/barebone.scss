@@ -7,7 +7,7 @@
 // ------------------------------
 
 // [1]
-$version: "0.0.2";
+$version: "0.0.3";
 
 // [2]
 $github: "https://github.com/BareboneFramework/barebone";
@@ -25,11 +25,18 @@ $github: "https://github.com/BareboneFramework/barebone";
 // ------------------------------
 // Import Components
 // ------------------------------
+@import "core";
+// Core components
 @import "colors";
+// Color pallet
 @import "variables";
+// Variables
 @import "mixins";
+// Mixins
 @import "layout";
+// Layout
 @import "typography";
+// Typography
 
 // ------------------------------
 // Import normalize.css
@@ -51,7 +58,7 @@ $github: "https://github.com/BareboneFramework/barebone";
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
 
 // ------------------------------
-// Site wide
+// Framework wide
 // ------------------------------
 * {
   box-sizing: border-box;
@@ -59,7 +66,7 @@ $github: "https://github.com/BareboneFramework/barebone";
 
 body {
   font-family: $font-family;
-  color: color($text-dark, 'primary');
+  color: color('text-#{$text-color-scheme}', 'primary');
   font-size: $body-font-size-base;
   font-weight: 400;
   letter-spacing: 0.010em;

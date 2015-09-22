@@ -1,0 +1,35 @@
+// ------------------------------
+// Core Functions of Barebone Framework
+// ------------------------------
+
+// ------------------------------
+// Color function
+//
+//   $color-name     = name of the color
+//   $color-variant  = variant of color (defaults to 500)
+//   $color-pallet   = map of colors (defaults to default colors)
+//
+// ------------------------------
+
+@function color($color-name, $color-variant: 500, $color-pallet: $colors) {
+
+  // TODO: Add check if $color-pallet exists
+  $color: map-get($color-pallet, $color-name);
+
+  // Try to get color
+  @if $color {
+    $color-specific: map_get($color, $color-variant);
+    // Try to get color variant
+    @if $color-specific {
+      // Successfully return color
+      @return $color-specific;
+    } @else {
+      // Color was found, but the variant wasn't!
+      @error '"#{$color-variant}", color variant was not found!';
+    }
+  } @else {
+    // Color wasn't found!
+    @error '"#{$color-name}", color was not found!';
+  }
+
+}

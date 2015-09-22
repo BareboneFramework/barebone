@@ -1,4 +1,13 @@
 // ------------------------------
+// Text Color Scheme
+//
+// - Value = "dark" or "light"
+//
+// ------------------------------
+
+$text-color-scheme: "dark" !default;
+
+// ------------------------------
 // Typography
 //
 // [1] Font Family
@@ -8,14 +17,13 @@
 //
 // ------------------------------
 
-@function rem($multiplier) {
-  $font-size: 10px;
-  @return $multiplier * $font-size
-}
-
 // [1]
 $font-family: Roboto, 'Helvetica Neue', sans-serif !default;
-$font-size: 10px;
+$base-font-size: 10px !default;
+
+@function rem($multiplier) {
+  @return $multiplier * $base-font-size
+}
 
 // [2]
 $display-4-font-size-base: rem(11.20) !default;
