@@ -8,7 +8,7 @@ It should be developed with SASS and not CSS. It provides variables/mixins/funct
 
 ## Core Components
  - Basic Tpography (Material Design)
- - Responsive Design (Grid System / Flex Box)
+ - Responsive Design (Flex Box)
  - Color Pallet (Material Design)
  - Helpers Classes
  - Maybe more in future!
@@ -18,4 +18,4 @@ It should be developed with SASS and not CSS. It provides variables/mixins/funct
 I wanted framework that doesn't have all the styling that I don't need. Something that provides basic tools that I can use to build apps on top of.
  
 ## License
-Barebone Framework is released under the MIT License.
+Barebone Framework is released under the [MIT License](https://github.com/BareboneFramework/barebone/blob/master/LICENSE.md).

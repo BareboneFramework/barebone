@@ -4,7 +4,7 @@ module.exports = function (grunt) {
         sass: {
             dist: {
                 files: {
-                    'css/framework.css': 'sass/barebone.sass'
+                    'css/framework.css': 'sass/barebone.scss'
                 }
             }
         },

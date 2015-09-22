@@ -1,0 +1,161 @@
+//--------------------
+// Material Design Headings
+//--------------------
+
+.display-4 {
+  @include display-4;
+}
+
+.display-3 {
+  @include display-3;
+}
+
+.display-2 {
+  @include display-2;
+}
+
+.display-1 {
+  @include display-1;
+}
+
+.display-1 .small,
+.display-1 small,
+.display-2 .small,
+.display-2 small,
+.display-3 .small,
+.display-3 small,
+.display-4 .small,
+.display-4 small {
+  font-weight: 400;
+  font-size: 0.65em;
+  line-height: 1;
+  color: color($text-dark, 'secondary');
+}
+
+.display-1.text-light .small,
+.display-1.text-light small,
+.display-2.text-light .small,
+.display-2.text-light small,
+.display-3.text-light .small,
+.display-3.text-light small,
+.display-4.text-light .small,
+.display-4.text-light small {
+  color: color($text-light, 'secondary');
+}
+
+.headline {
+  @include headline;
+}
+
+title,
+.title {
+  @include title;
+}
+
+.subhead {
+  @include subhead;
+}
+
+//--------------------
+// Default Headings
+//--------------------
+h1 {
+  @include h1;
+}
+
+h2 {
+  @include h2;
+}
+
+h3 {
+  @include h3;
+}
+
+h4 {
+  @include h4;
+}
+
+h5 {
+  @include h5;
+}
+
+h6 {
+  @include h6;
+}
+
+//--------------------
+// Body Copy
+//--------------------
+
+.body-1 {
+  @include body-1;
+}
+
+.body-2 {
+  @include body-2;
+}
+
+caption,
+.caption {
+  @include caption;
+}
+
+//--------------------
+// Links
+//--------------------
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+//--------------------
+// Helpers
+//
+// [1] Light Color
+// [2] Dark Color
+//
+//--------------------
+
+// [1]
+.text-light,
+.text-light-primary {
+  color: color($text-light, 'primary');
+}
+
+.text-light-secondary {
+  color: color($text-light, 'secondary');
+}
+
+.text-light-hint {
+  color: color($text-light, 'hint');
+}
+
+.icon-light-active {
+  color: color($icon-light, 'active');
+}
+
+.icon-light-inactive {
+  color: color($icon-light, 'inactive');
+}
+
+// [2]
+.text-dark,
+.text-dark-primary {
+  color: color($text-dark, 'primary');
+}
+
+.text-dark-secondary {
+  color: color($text-dark, 'secondary');
+}
+
+.text-dark-hint {
+  color: color($text-dark, 'hint');
+}
+
+.icon-dark-active {
+  color: color($icon-dark, 'active');
+}
+
+.icon-dark-inactive {
+  color: color($icon-dark, 'inactive');
+}

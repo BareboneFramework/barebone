@@ -1,0 +1,70 @@
+// ------------------------------
+// Framework Variables
+//
+// [1] Version
+// [2] Github Repository
+//
+// ------------------------------
+
+// [1]
+$version: "0.0.2";
+
+// [2]
+$github: "https://github.com/BareboneFramework/barebone";
+
+// ------------------------------
+// Framework Signature (Please don't remove it)
+// ------------------------------
+
+/*
+ * Barebone Framework version #{$version}
+ *
+ * #{$github}
+ */
+
+// ------------------------------
+// Import Components
+// ------------------------------
+@import "colors";
+@import "variables";
+@import "mixins";
+@import "layout";
+@import "typography";
+
+// ------------------------------
+// Import normalize.css
+// ------------------------------
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css);
+
+// ------------------------------
+// Import fonts
+//
+// [1] Roboto Material Design Font
+// [2] FontAwesome Icons
+//
+// ------------------------------
+
+// [1]
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,500italic,400italic,700italic,300italic);
+
+// [2]
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+// ------------------------------
+// Site wide
+// ------------------------------
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  color: color($text-dark, 'primary');
+  font-size: $body-font-size-base;
+  font-weight: 400;
+  letter-spacing: 0.010em;
+  line-height: rem(2);
+  min-height: 100%;
+}
+
+/* Barebone Framework version #{$version} */
