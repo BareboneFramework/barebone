@@ -19,6 +19,8 @@ $text-color-scheme: "dark" !default;
 
 // [1]
 $font-family: Roboto, 'Helvetica Neue', sans-serif !default;
+
+// 10px = font-size: 62.5% at <html>
 $base-font-size: 10px !default;
 
 @function rem($multiplier) {

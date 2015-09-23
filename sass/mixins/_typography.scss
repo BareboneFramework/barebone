@@ -116,7 +116,7 @@
 // Small Heading
 // ------------------------------
 
-@mixin headingSmall($light: false) {
+@mixin heading-small($light: false) {
   font-weight: 400;
   font-size: 0.65em;
   line-height: 1;
@@ -130,7 +130,7 @@
 }
 
 // If $light = true, generate light small headline
-@mixin generateHeadingSmall($light: false) {
+@mixin generate-heading-small($light: false) {
 
   $suffix: " ";
   @if $light {
@@ -144,7 +144,7 @@
     .h#{$i $suffix} small,
     h#{$i $suffix} .small,
     h#{$i $suffix} small {
-      @include headingSmall($light);
+      @include heading-small($light);
     }
   }
 
@@ -153,7 +153,7 @@
 
     .display-#{$i $suffix} .small,
     .display-#{$i $suffix} small {
-      @include headingSmall($light);
+      @include heading-small($light);
     }
   }
 

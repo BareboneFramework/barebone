@@ -25,18 +25,18 @@ $github: "https://github.com/BareboneFramework/barebone";
 // ------------------------------
 // Import Components
 // ------------------------------
-@import "core";
 // Core components
-@import "colors";
+@import "core";
 // Color pallet
-@import "variables";
+@import "colors";
 // Variables
-@import "mixins";
+@import "variables";
 // Mixins
-@import "layout";
+@import "mixins";
 // Layout
-@import "typography";
+@import "layout";
 // Typography
+@import "typography";
 
 // ------------------------------
 // Import normalize.css
@@ -64,13 +64,15 @@ $github: "https://github.com/BareboneFramework/barebone";
   box-sizing: border-box;
 }
 
-body {
+html {
+  font-size: 62.5%;
+  line-height: 1.4;
   font-family: $font-family;
   color: color('text-#{$text-color-scheme}', 'primary');
-  font-size: $body-font-size-base;
-  font-weight: 400;
-  letter-spacing: 0.010em;
-  line-height: rem(2);
+}
+
+html,
+body {
   min-height: 100%;
 }
 

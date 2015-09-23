@@ -19,8 +19,8 @@
 }
 
 // Generate small heading
-@include generateHeadingSmall();
-@include generateHeadingSmall(true);
+@include generate-heading-small();
+@include generate-heading-small(true);
 
 .headline {
   @include headline;
