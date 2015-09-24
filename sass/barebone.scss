@@ -7,19 +7,19 @@
 // ------------------------------
 
 // [1]
-$version: "0.0.3";
+$bb-version: "0.0.3";
 
 // [2]
-$github: "https://github.com/BareboneFramework/barebone";
+$bb-github: "https://github.com/BareboneFramework/barebone";
 
 // ------------------------------
 // Framework Signature (Please don't remove it)
 // ------------------------------
 
 /*
- * Barebone Framework version #{$version}
+ * Barebone Framework version #{$bb-version}
  *
- * #{$github}
+ * #{$bb-github}
  */
 
 // ------------------------------
@@ -67,8 +67,8 @@ $github: "https://github.com/BareboneFramework/barebone";
 html {
   font-size: 62.5%;
   line-height: 1.4;
-  font-family: $font-family;
-  color: color('text-#{$text-color-scheme}', 'primary');
+  font-family: $bb-font-family;
+  color: bb-color('text-#{$bb-text-color-scheme}', 'primary');
 }
 
 html,
@@ -76,4 +76,4 @@ body {
   min-height: 100%;
 }
 
-/* Barebone Framework version #{$version} */
+/* Barebone Framework version #{$bb-version} */

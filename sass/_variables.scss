@@ -1,11 +1,17 @@
 // ------------------------------
+// Framework Prefix
+// ------------------------------
+
+$bb-framework-prefix: "bb" !default;
+
+// ------------------------------
 // Text Color Scheme
 //
 // - Value = "dark" or "light"
 //
 // ------------------------------
 
-$text-color-scheme: "dark" !default;
+$bb-text-color-scheme: "dark" !default;
 
 // ------------------------------
 // Typography
@@ -18,44 +24,44 @@ $text-color-scheme: "dark" !default;
 // ------------------------------
 
 // [1]
-$font-family: Roboto, 'Helvetica Neue', sans-serif !default;
+$bb-font-family: Roboto, 'Helvetica Neue', sans-serif !default;
 
 // 10px = font-size: 62.5% at <html>
-$base-font-size: 10px !default;
+$bb-base-font-size: 10px !default;
 
-@function rem($multiplier) {
-  @return $multiplier * $base-font-size
+@function bb-rem($multiplier) {
+  @return $multiplier * $bb-base-font-size
 }
 
 // [2]
-$display-4-font-size-base: rem(11.20) !default;
-$display-3-font-size-base: rem(5.600) !default;
-$display-2-font-size-base: rem(4.500) !default;
-$display-1-font-size-base: rem(3.400) !default;
+$bb-display-4-font-size-base: bb-rem(11.20) !default;
+$bb-display-3-font-size-base: bb-rem(5.600) !default;
+$bb-display-2-font-size-base: bb-rem(4.500) !default;
+$bb-display-1-font-size-base: bb-rem(3.400) !default;
 
 // [3]
-$heading-1-font-size-base: rem(3.600) !default;
-$heading-2-font-size-base: rem(3.000) !default;
-$heading-3-font-size-base: rem(2.400) !default;
-$heading-4-font-size-base: rem(1.800) !default;
-$heading-5-font-size-base: rem(1.400) !default;
-$heading-6-font-size-base: rem(1.200) !default;
+$bb-heading-1-font-size-base: bb-rem(3.600) !default;
+$bb-heading-2-font-size-base: bb-rem(3.000) !default;
+$bb-heading-3-font-size-base: bb-rem(2.400) !default;
+$bb-heading-4-font-size-base: bb-rem(1.800) !default;
+$bb-heading-5-font-size-base: bb-rem(1.400) !default;
+$bb-heading-6-font-size-base: bb-rem(1.200) !default;
 
 // [4]
-$headline-font-size-base: rem(2.400) !default;
-$title-font-size-base: rem(2.000) !default;
-$subhead-font-size-base: rem(1.600) !default;
+$bb-headline-font-size-base: bb-rem(2.400) !default;
+$bb-title-font-size-base: bb-rem(2.000) !default;
+$bb-subhead-font-size-base: bb-rem(1.600) !default;
 
-$body-font-size-base: rem(1.400) !default;
-$caption-font-size-base: rem(1.200) !default;
+$bb-body-font-size-base: bb-rem(1.400) !default;
+$bb-caption-font-size-base: bb-rem(1.200) !default;
 
 // ------------------------------
 // Layout
 // ------------------------------
-$baseline-grid: 8px !default;
-$layout-gutter-width: ($baseline-grid * 2) !default;
+$bb-baseline-grid: 8px !default;
+$bb-layout-gutter-width: ($bb-baseline-grid * 2) !default;
 
-$layout-breakpoint-xsmall: 600px !default;
-$layout-breakpoint-small: 960px !default;
-$layout-breakpoint-medium: 1280px !default;
-$layout-breakpoint-large: 1920px !default;
+$bb-layout-breakpoint-xsmall: 600px !default;
+$bb-layout-breakpoint-small: 960px !default;
+$bb-layout-breakpoint-medium: 1280px !default;
+$bb-layout-breakpoint-large: 1920px !default;

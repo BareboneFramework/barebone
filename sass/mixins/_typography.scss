@@ -2,113 +2,113 @@
 // Material Design Headings
 // ------------------------------
 
-@mixin display-4() {
-  font-size: $display-4-font-size-base;
+@mixin bb-display-4() {
+  font-size: $bb-display-4-font-size-base;
   font-weight: 300;
   letter-spacing: - 5 px;
-  line-height: rem(12.8)
+  line-height: bb-rem(12.8)
 }
 
-@mixin display-3() {
-  font-size: $display-3-font-size-base;
+@mixin bb-display-3() {
+  font-size: $bb-display-3-font-size-base;
   font-weight: 400;
-  line-height: rem(6.4);
+  line-height: bb-rem(6.4);
 }
 
-@mixin display-2() {
-  font-size: $display-2-font-size-base;
+@mixin bb-display-2() {
+  font-size: $bb-display-2-font-size-base;
   font-weight: 400;
-  line-height: rem(6.4);
+  line-height: bb-rem(6.4);
 }
 
-@mixin display-1() {
-  font-size: $display-1-font-size-base;
+@mixin bb-display-1() {
+  font-size: $bb-display-1-font-size-base;
   font-weight: 400;
-  line-height: rem(5.2);
+  line-height: bb-rem(5.2);
 }
 
 // ------------------------------
 // Default Headings
 // ------------------------------
 
-@mixin heading-shared() {
+@mixin bb-heading-shared() {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-bottom: bb-rem(1);
+  margin-top: bb-rem(1);
 }
 
-@mixin h1() {
-  font-size: $heading-1-font-size-base;
-  @include heading-shared;
+@mixin bb-h1() {
+  font-size: $bb-heading-1-font-size-base;
+  @include bb-heading-shared;
 }
 
-@mixin h2() {
-  font-size: $heading-2-font-size-base;
-  @include heading-shared;
+@mixin bb-h2() {
+  font-size: $bb-heading-2-font-size-base;
+  @include bb-heading-shared;
 }
 
-@mixin h3() {
-  font-size: $heading-3-font-size-base;
-  @include heading-shared;
+@mixin bb-h3() {
+  font-size: $bb-heading-3-font-size-base;
+  @include bb-heading-shared;
 }
 
-@mixin h4() {
-  font-size: $heading-4-font-size-base;
-  @include heading-shared;
+@mixin bb-h4() {
+  font-size: $bb-heading-4-font-size-base;
+  @include bb-heading-shared;
 }
 
-@mixin h5() {
-  font-size: $heading-5-font-size-base;
-  @include heading-shared;
+@mixin bb-h5() {
+  font-size: $bb-heading-5-font-size-base;
+  @include bb-heading-shared;
 }
 
-@mixin h6() {
-  font-size: $heading-6-font-size-base;
-  @include heading-shared;
+@mixin bb-h6() {
+  font-size: $bb-heading-6-font-size-base;
+  @include bb-heading-shared;
 }
 
 // ------------------------------
 // Text Body
 // ------------------------------
 
-@mixin headline() {
-  font-size: $headline-font-size-base;
+@mixin bb-headline() {
+  font-size: $bb-headline-font-size-base;
   font-weight: 400;
-  line-height: rem(3.2);
+  line-height: bb-rem(3.2);
 }
 
-@mixin title() {
-  font-size: $title-font-size-base;
+@mixin bb-title() {
+  font-size: $bb-title-font-size-base;
   font-weight: 500;
   letter-spacing: 0.005em;
 }
 
-@mixin subhead() {
-  font-size: $subhead-font-size-base;
+@mixin bb-subhead() {
+  font-size: $bb-subhead-font-size-base;
   font-weight: 400;
   letter-spacing: 0.010em;
-  line-height: rem(2.4);
+  line-height: bb-rem(2.4);
 }
 
-@mixin body-1() {
-  font-size: $body-font-size-base;
+@mixin bb-body-1() {
+  font-size: $bb-body-font-size-base;
   font-weight: 400;
   letter-spacing: 0.010em;
-  line-height: rem(2);
+  line-height: bb-rem(2);
 }
 
-@mixin body-2() {
-  font-size: $body-font-size-base;
+@mixin bb-body-2() {
+  font-size: $bb-body-font-size-base;
   font-weight: 500;
   letter-spacing: 0.010em;
-  line-height: rem(2.4);
+  line-height: bb-rem(2.4);
 }
 
-@mixin caption() {
-  font-size: $caption-font-size-base;
+@mixin bb-caption() {
+  font-size: $bb-caption-font-size-base;
   letter-spacing: 0.020em;
 }
 
@@ -116,21 +116,21 @@
 // Small Heading
 // ------------------------------
 
-@mixin heading-small($light: false) {
+@mixin bb-heading-small($light: false) {
   font-weight: 400;
   font-size: 0.65em;
   line-height: 1;
 
   // Create variant for light or dark text
   @if $light {
-    color: color('text-light', 'secondary');
+    color: bb-color('text-light', 'secondary');
   } @else {
-    color: color('text-dark', 'secondary');
+    color: bb-color('text-dark', 'secondary');
   }
 }
 
 // If $light = true, generate light small headline
-@mixin generate-heading-small($light: false) {
+@mixin bb-generate-heading-small($light: false) {
 
   $suffix: " ";
   @if $light {
@@ -144,7 +144,7 @@
     .h#{$i $suffix} small,
     h#{$i $suffix} .small,
     h#{$i $suffix} small {
-      @include heading-small($light);
+      @include bb-heading-small($light);
     }
   }
 
@@ -153,7 +153,7 @@
 
     .display-#{$i $suffix} .small,
     .display-#{$i $suffix} small {
-      @include heading-small($light);
+      @include bb-heading-small($light);
     }
   }
 

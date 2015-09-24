@@ -19,7 +19,7 @@
 }
 
 // [2]
-@media (min-width: $layout-breakpoint-small) {
+@media (min-width: $bb-layout-breakpoint-small) {
   .container-fixed {
     width: 70%;
     margin-left: auto;
@@ -28,7 +28,7 @@
   }
 }
 
-@media (min-width: $layout-breakpoint-medium) {
+@media (min-width: $bb-layout-breakpoint-medium) {
   .container-fixed {
     width: 85%;
     margin-left: auto;
@@ -67,7 +67,7 @@
 // [1]
 .padding > .flex-sm,
 .padding > .flex-lt-md {
-  padding: $layout-gutter-width / 4;
+  padding: $bb-layout-gutter-width / 4;
 }
 
 .padding,
@@ -75,18 +75,18 @@
 .padding > .flex-gt-sm,
 .padding > .flex-md,
 .padding > .flex-lt-lg {
-  padding: $layout-gutter-width / 2;
+  padding: $bb-layout-gutter-width / 2;
 }
 
 .padding > .flex-gt-md,
 .padding > .flex-lg {
-  padding: $layout-gutter-width / 1;
+  padding: $bb-layout-gutter-width / 1;
 }
 
 // [2]
 .margin > .flex-sm,
 .margin > .flex-lt-md {
-  margin: $layout-gutter-width / 4;
+  margin: $bb-layout-gutter-width / 4;
 }
 
 .margin,
@@ -94,12 +94,12 @@
 .margin > .flex-gt-sm,
 .margin > .flex-md,
 .margin > .flex-lt-lg {
-  margin: $layout-gutter-width / 2;
+  margin: $bb-layout-gutter-width / 2;
 }
 
 .margin > .flex-gt-md,
 .margin > .flex-lg {
-  margin: $layout-gutter-width / 1;
+  margin: $bb-layout-gutter-width / 1;
 }
 
 // ------------------------------
@@ -114,7 +114,7 @@
 // ------------------------------
 
 // [1]
-@mixin flex-order-for-name($suffix: null) {
+@mixin bb-flex-order-for-name($suffix: null) {
   $selector: 'flex-order';
   @if $suffix != null {
     $selector: 'flex-order-#{$suffix}';
@@ -153,7 +153,7 @@
 }
 
 // [2]
-@mixin layout-for-name($name) {
+@mixin bb-layout-for-name($name) {
   .#{$name} {
     box-sizing: border-box;
     display: -webkit-box;
@@ -176,7 +176,7 @@
 }
 
 // [3]
-@mixin offset-for-name($name: null) {
+@mixin bb-offset-for-name($name: null) {
   $offsetName: 'offset';
   @if $name != null {
     $offsetName: 'offset-#{$name}';
@@ -197,7 +197,7 @@
 }
 
 // [4]
-@mixin flex-properties-for-name($name: null) {
+@mixin bb-flex-properties-for-name($name: null) {
   $flexName: 'flex';
   @if $name != null {
     $flexName: 'flex-#{$name}';
@@ -232,7 +232,7 @@
 }
 
 // [5]
-@mixin align-for-name($suffix: null) {
+@mixin bb-align-for-name($suffix: null) {
   $name: 'align';
   @if $suffix != null {
     $name: 'align-#{$suffix}';
@@ -314,10 +314,10 @@
 // Basic Flex Attributes
 // ------------------------------
 
-@include flex-properties-for-name();
-@include align-for-name();
-@include flex-order-for-name();
-@include offset-for-name();
+@include bb-flex-properties-for-name();
+@include bb-align-for-name();
+@include bb-flex-order-for-name();
+@include bb-offset-for-name();
 
 // ------------------------------
 // Flex Attributes for specific layout
@@ -337,31 +337,31 @@
 // ------------------------------
 
 // [1]
-@media (max-width: $layout-breakpoint-xsmall - 1) {
+@media (max-width: $bb-layout-breakpoint-xsmall - 1) {
   .hide-xsm, .hide {
     &:not(.show-xsm):not(.show) {
       display: none;
     }
   }
 
-  @include flex-order-for-name(xsm);
-  @include align-for-name(xsm);
-  @include layout-for-name(xsm);
-  @include offset-for-name(xsm);
-  @include flex-properties-for-name(xsm);
+  @include bb-flex-order-for-name(xsm);
+  @include bb-align-for-name(xsm);
+  @include bb-layout-for-name(xsm);
+  @include bb-offset-for-name(xsm);
+  @include bb-flex-properties-for-name(xsm);
 }
 
 // [1.1]
-@media (min-width: $layout-breakpoint-xsmall) {
-  @include flex-order-for-name(gt-xsm);
-  @include align-for-name(gt-xsm);
-  @include layout-for-name(gt-xsm);
-  @include offset-for-name(gt-xsm);
-  @include flex-properties-for-name(gt-xsm);
+@media (min-width: $bb-layout-breakpoint-xsmall) {
+  @include bb-flex-order-for-name(gt-xsm);
+  @include bb-align-for-name(gt-xsm);
+  @include bb-layout-for-name(gt-xsm);
+  @include bb-offset-for-name(gt-xsm);
+  @include bb-flex-properties-for-name(gt-xsm);
 }
 
 // [2]
-@media (min-width: $layout-breakpoint-xsmall) and (max-width: $layout-breakpoint-small - 1) {
+@media (min-width: $bb-layout-breakpoint-xsmall) and (max-width: $bb-layout-breakpoint-small - 1) {
   .hide, .hide-gt-xsm {
     &:not(.show-gt-xsm):not(.show-sm):not(.show) {
       display: none;
@@ -370,24 +370,24 @@
   .hide-sm:not(.show-sm):not(.show) {
     display: none;
   }
-  @include flex-order-for-name(sm);
-  @include align-for-name(sm);
-  @include layout-for-name(sm);
-  @include offset-for-name(sm);
-  @include flex-properties-for-name(sm);
+  @include bb-flex-order-for-name(sm);
+  @include bb-align-for-name(sm);
+  @include bb-layout-for-name(sm);
+  @include bb-offset-for-name(sm);
+  @include bb-flex-properties-for-name(sm);
 }
 
 // [2.1]
-@media (min-width: $layout-breakpoint-small) {
-  @include flex-order-for-name(gt-sm);
-  @include align-for-name(gt-sm);
-  @include layout-for-name(gt-sm);
-  @include offset-for-name(gt-sm);
-  @include flex-properties-for-name(gt-sm);
+@media (min-width: $bb-layout-breakpoint-small) {
+  @include bb-flex-order-for-name(gt-sm);
+  @include bb-align-for-name(gt-sm);
+  @include bb-layout-for-name(gt-sm);
+  @include bb-offset-for-name(gt-sm);
+  @include bb-flex-properties-for-name(gt-sm);
 }
 
 // [3]
-@media (min-width: $layout-breakpoint-small) and (max-width: $layout-breakpoint-medium - 1) {
+@media (min-width: $bb-layout-breakpoint-small) and (max-width: $bb-layout-breakpoint-medium - 1) {
   .hide, .hide-gt-sm {
     &:not(.show-gt-sm):not(.show-md):not(.show) {
       display: none;
@@ -396,24 +396,24 @@
   .hide-md:not(.show-md):not(.show) {
     display: none;
   }
-  @include flex-order-for-name(md);
-  @include align-for-name(md);
-  @include layout-for-name(md);
-  @include offset-for-name(md);
-  @include flex-properties-for-name(md);
+  @include bb-flex-order-for-name(md);
+  @include bb-align-for-name(md);
+  @include bb-layout-for-name(md);
+  @include bb-offset-for-name(md);
+  @include bb-flex-properties-for-name(md);
 }
 
 // [3.1]
-@media (min-width: $layout-breakpoint-medium) {
-  @include flex-order-for-name(gt-md);
-  @include align-for-name(gt-md);
-  @include layout-for-name(gt-md);
-  @include offset-for-name(gt-md);
-  @include flex-properties-for-name(gt-md);
+@media (min-width: $bb-layout-breakpoint-medium) {
+  @include bb-flex-order-for-name(gt-md);
+  @include bb-align-for-name(gt-md);
+  @include bb-layout-for-name(gt-md);
+  @include bb-offset-for-name(gt-md);
+  @include bb-flex-properties-for-name(gt-md);
 }
 
 // [4]
-@media (min-width: $layout-breakpoint-medium) and (max-width: $layout-breakpoint-large - 1) {
+@media (min-width: $bb-layout-breakpoint-medium) and (max-width: $bb-layout-breakpoint-large - 1) {
   .hide, .hide-gt-sm, .hide-gt-md {
     &:not(.show-gt-sm):not(.show-gt-md):not(.show-lg):not(.show) {
       display: none;
@@ -422,23 +422,23 @@
   .hide-lg:not(.show-lg):not(.show) {
     display: none;
   }
-  @include flex-order-for-name(lg);
-  @include align-for-name(lg);
-  @include layout-for-name(lg);
-  @include offset-for-name(lg);
-  @include flex-properties-for-name(lg);
+  @include bb-flex-order-for-name(lg);
+  @include bb-align-for-name(lg);
+  @include bb-layout-for-name(lg);
+  @include bb-offset-for-name(lg);
+  @include bb-flex-properties-for-name(lg);
 }
 
 // [4.1]
-@media (min-width: $layout-breakpoint-large) {
+@media (min-width: $bb-layout-breakpoint-large) {
   .hide-gt-sm, .hide-gt-md, .hide-gt-lg, .hide {
     &:not(.show-gt-sm):not(.show-gt-md):not(.show-gt-lg):not(.show) {
       display: none;
     }
   }
-  @include flex-order-for-name(gt-lg);
-  @include align-for-name(gt-lg);
-  @include layout-for-name(gt-lg);
-  @include offset-for-name(gt-lg);
-  @include flex-properties-for-name(gt-lg);
+  @include bb-flex-order-for-name(gt-lg);
+  @include bb-align-for-name(gt-lg);
+  @include bb-layout-for-name(gt-lg);
+  @include bb-offset-for-name(gt-lg);
+  @include bb-flex-properties-for-name(gt-lg);
 }
