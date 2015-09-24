@@ -2,19 +2,19 @@
 // Material Design Headings
 //--------------------
 
-.display-4 {
+.bb-display-4 {
   @include bb-display-4;
 }
 
-.display-3 {
+.bb-display-3 {
   @include bb-display-3;
 }
 
-.display-2 {
+.bb-display-2 {
   @include bb-display-2;
 }
 
-.display-1 {
+.bb-display-1 {
   @include bb-display-1;
 }
 
@@ -22,48 +22,50 @@
 @include bb-generate-heading-small();
 @include bb-generate-heading-small(true);
 
-.headline {
+.bb-headline {
   @include bb-headline;
 }
 
-title,
-.title {
+.bb-title {
   @include bb-title;
 }
 
-.subhead {
+.bb-subhead {
   @include bb-subhead;
 }
 
 //--------------------
 // Default Headings
+//
+// - <h#> are styled, but can be overwritten by user and he can use "backup" .bb-h# to style it as Barebone
+//
 //--------------------
-.h1,
+.bb-h1,
 h1 {
   @include bb-h1;
 }
 
-.h2,
+.bb-h2,
 h2 {
   @include bb-h2;
 }
 
-.h3,
+.bb-h3,
 h3 {
   @include bb-h3;
 }
 
-.h4,
+.bb-h4,
 h4 {
   @include bb-h4;
 }
 
-.h5,
+.bb-h5,
 h5 {
   @include bb-h5;
 }
 
-.h6,
+.bb-h6,
 h6 {
   @include bb-h6;
 }
@@ -72,16 +74,15 @@ h6 {
 // Body Copy
 //--------------------
 
-.body-1 {
+.bb-body-1 {
   @include bb-body-1;
 }
 
-.body-2 {
+.bb-body-2 {
   @include bb-body-2;
 }
 
-caption,
-.caption {
+.bb-caption {
   @include bb-caption;
 }
 
@@ -102,45 +103,45 @@ a {
 //--------------------
 
 // [1]
-.text-light,
-.text-light-primary {
+.bb-text-light,
+.bb-text-light-primary {
   color: bb-color('text-light', 'primary');
 }
 
-.text-light-secondary {
+.bb-text-light-secondary {
   color: bb-color('text-light', 'secondary');
 }
 
-.text-light-hint {
+.bb-text-light-hint {
   color: bb-color('text-light', 'hint');
 }
 
-.icon-light-active {
+.bb-icon-light-active {
   color: bb-color('icon-light', 'active');
 }
 
-.icon-light-inactive {
+.bb-icon-light-inactive {
   color: bb-color('icon-light', 'inactive');
 }
 
 // [2]
-.text-dark,
-.text-dark-primary {
+.bb-text-dark,
+.bb-text-dark-primary {
   color: bb-color('text-dark', 'primary');
 }
 
-.text-dark-secondary {
+.bb-text-dark-secondary {
   color: bb-color('text-dark', 'secondary');
 }
 
-.text-dark-hint {
+.bb-text-dark-hint {
   color: bb-color('text-dark', 'hint');
 }
 
-.icon-dark-active {
+.bb-icon-dark-active {
   color: bb-color('icon-dark', 'active');
 }
 
-.icon-dark-inactive {
+.bb-icon-dark-inactive {
   color: bb-color('icon-dark', 'inactive');
 }

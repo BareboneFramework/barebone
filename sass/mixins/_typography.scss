@@ -134,15 +134,15 @@
 
   $suffix: " ";
   @if $light {
-    $suffix: ".text-light";
+    $suffix: ".#{bb-prefix()}text-light-primary";
   }
 
   // Default Headings
   @for $i from 1 to 6 {
 
-    .h#{$i $suffix} .small,
-    .h#{$i $suffix} small,
-    h#{$i $suffix} .small,
+    .#{bb-prefix()}h#{$i $suffix} .#{bb-prefix()}small,
+    .#{bb-prefix()}h#{$i $suffix} small,
+    h#{$i $suffix} .#{bb-prefix()}small,
     h#{$i $suffix} small {
       @include bb-heading-small($light);
     }
@@ -151,8 +151,8 @@
   // Material Design Headings
   @for $i from 1 to 4 {
 
-    .display-#{$i $suffix} .small,
-    .display-#{$i $suffix} small {
+    .#{bb-prefix()}display-#{$i $suffix} .#{bb-prefix()}small,
+    .#{bb-prefix()}display-#{$i $suffix} small {
       @include bb-heading-small($light);
     }
   }

@@ -3,6 +3,17 @@
 // ------------------------------
 
 // ------------------------------
+// Framework Prefix Function
+//
+// @return Framework Prefix with "-" at the end
+//
+// ------------------------------
+
+@function bb-prefix() {
+  @return $bb-framework-prefix + "-";
+}
+
+// ------------------------------
 // Color function
 //
 //   $color-name     = name of the color

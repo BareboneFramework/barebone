@@ -7,8 +7,8 @@
 // ------------------------------
 
 // [1]
-.container,
-.container-fixed {
+.#{bb-prefix()}container,
+.#{bb-prefix()}container-fixed {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -20,7 +20,7 @@
 
 // [2]
 @media (min-width: $bb-layout-breakpoint-small) {
-  .container-fixed {
+  .#{bb-prefix()}container-fixed {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -29,7 +29,7 @@
 }
 
 @media (min-width: $bb-layout-breakpoint-medium) {
-  .container-fixed {
+  .#{bb-prefix()}container-fixed {
     width: 85%;
     margin-left: auto;
     margin-right: auto;
@@ -44,61 +44,61 @@
 //
 // ------------------------------
 
-.column {
+.#{bb-prefix()}column {
   flex-direction: column;
   -webkit-flex-direction: column;
 }
 
-.row {
+.#{bb-prefix()}row {
   flex-direction: row;
   -webkit-flex-direction: row;
 }
 
-.wrap {
+.#{bb-prefix()}wrap {
   flex-wrap: wrap;
 }
 
-.fill {
+.#{bb-prefix()}fill {
   margin: 0;
   width: 100%;
   min-height: 100%;
 }
 
 // [1]
-.padding > .flex-sm,
-.padding > .flex-lt-md {
+.#{bb-prefix()}padding > .#{bb-prefix()}flex-sm,
+.#{bb-prefix()}padding > .#{bb-prefix()}flex-lt-md {
   padding: $bb-layout-gutter-width / 4;
 }
 
-.padding,
-.padding > .flex,
-.padding > .flex-gt-sm,
-.padding > .flex-md,
-.padding > .flex-lt-lg {
+.#{bb-prefix()}padding,
+.#{bb-prefix()}padding > .#{bb-prefix()}flex,
+.#{bb-prefix()}padding > .#{bb-prefix()}flex-gt-sm,
+.#{bb-prefix()}padding > .#{bb-prefix()}flex-md,
+.#{bb-prefix()}padding > .#{bb-prefix()}flex-lt-lg {
   padding: $bb-layout-gutter-width / 2;
 }
 
-.padding > .flex-gt-md,
-.padding > .flex-lg {
+.#{bb-prefix()}padding > .#{bb-prefix()}flex-gt-md,
+.#{bb-prefix()}padding > .#{bb-prefix()}flex-lg {
   padding: $bb-layout-gutter-width / 1;
 }
 
 // [2]
-.margin > .flex-sm,
-.margin > .flex-lt-md {
+.#{bb-prefix()}margin > .#{bb-prefix()}flex-sm,
+.#{bb-prefix()}margin > .#{bb-prefix()}flex-lt-md {
   margin: $bb-layout-gutter-width / 4;
 }
 
-.margin,
-.margin > .flex,
-.margin > .flex-gt-sm,
-.margin > .flex-md,
-.margin > .flex-lt-lg {
+.#{bb-prefix()}margin,
+.#{bb-prefix()}margin > .#{bb-prefix()}flex,
+.#{bb-prefix()}margin > .#{bb-prefix()}flex-gt-sm,
+.#{bb-prefix()}margin > .#{bb-prefix()}flex-md,
+.#{bb-prefix()}margin > .#{bb-prefix()}flex-lt-lg {
   margin: $bb-layout-gutter-width / 2;
 }
 
-.margin > .flex-gt-md,
-.margin > .flex-lg {
+.#{bb-prefix()}margin > .#{bb-prefix()}flex-gt-md,
+.#{bb-prefix()}margin > .#{bb-prefix()}flex-lg {
   margin: $bb-layout-gutter-width / 1;
 }
 
@@ -115,9 +115,9 @@
 
 // [1]
 @mixin bb-flex-order-for-name($suffix: null) {
-  $selector: 'flex-order';
+  $selector: bb-prefix() + 'flex-order';
   @if $suffix != null {
-    $selector: 'flex-order-#{$suffix}';
+    $selector: bb-prefix() + 'flex-order-#{$suffix}';
   }
 
   .#{$selector}-0 {
@@ -154,6 +154,8 @@
 
 // [2]
 @mixin bb-layout-for-name($name) {
+  $name: bb-prefix() + $name;
+
   .#{$name} {
     box-sizing: border-box;
     display: -webkit-box;
@@ -177,9 +179,9 @@
 
 // [3]
 @mixin bb-offset-for-name($name: null) {
-  $offsetName: 'offset';
+  $offsetName: bb-prefix() + 'offset';
   @if $name != null {
-    $offsetName: 'offset-#{$name}';
+    $offsetName: bb-prefix() + 'offset-#{$name}';
   }
 
   @for $i from 1 through 19 {
@@ -198,9 +200,9 @@
 
 // [4]
 @mixin bb-flex-properties-for-name($name: null) {
-  $flexName: 'flex';
+  $flexName: bb-prefix() + 'flex';
   @if $name != null {
-    $flexName: 'flex-#{$name}';
+    $flexName: bb-prefix() + 'flex-#{$name}';
   }
 
   .#{$flexName} {
@@ -233,9 +235,9 @@
 
 // [5]
 @mixin bb-align-for-name($suffix: null) {
-  $name: 'align';
+  $name: bb-prefix() + 'align';
   @if $suffix != null {
-    $name: 'align-#{$suffix}';
+    $name: bb-prefix() + 'align-#{$suffix}';
   }
   // ------------------------------
   // Alignment attributes for layout containers' children
@@ -338,8 +340,8 @@
 
 // [1]
 @media (max-width: $bb-layout-breakpoint-xsmall - 1) {
-  .hide-xsm, .hide {
-    &:not(.show-xsm):not(.show) {
+  .#{bb-prefix()}hide-xsm, .#{bb-prefix()}hide {
+    &:not(.#{bb-prefix()}show-xsm):not(.#{bb-prefix()}show) {
       display: none;
     }
   }
@@ -362,12 +364,12 @@
 
 // [2]
 @media (min-width: $bb-layout-breakpoint-xsmall) and (max-width: $bb-layout-breakpoint-small - 1) {
-  .hide, .hide-gt-xsm {
-    &:not(.show-gt-xsm):not(.show-sm):not(.show) {
+  .#{bb-prefix()}hide, .#{bb-prefix()}hide-gt-xsm {
+    &:not(.#{bb-prefix()}show-gt-xsm):not(.#{bb-prefix()}show-sm):not(.#{bb-prefix()}show) {
       display: none;
     }
   }
-  .hide-sm:not(.show-sm):not(.show) {
+  .#{bb-prefix()}hide-sm:not(.#{bb-prefix()}show-sm):not(.#{bb-prefix()}show) {
     display: none;
   }
   @include bb-flex-order-for-name(sm);
@@ -388,12 +390,12 @@
 
 // [3]
 @media (min-width: $bb-layout-breakpoint-small) and (max-width: $bb-layout-breakpoint-medium - 1) {
-  .hide, .hide-gt-sm {
-    &:not(.show-gt-sm):not(.show-md):not(.show) {
+  .#{bb-prefix()}hide, .#{bb-prefix()}hide-gt-sm {
+    &:not(.#{bb-prefix()}show-gt-sm):not(.#{bb-prefix()}show-md):not(.#{bb-prefix()}show) {
       display: none;
     }
   }
-  .hide-md:not(.show-md):not(.show) {
+  .#{bb-prefix()}hide-md:not(.#{bb-prefix()}show-md):not(.#{bb-prefix()}show) {
     display: none;
   }
   @include bb-flex-order-for-name(md);
@@ -414,12 +416,12 @@
 
 // [4]
 @media (min-width: $bb-layout-breakpoint-medium) and (max-width: $bb-layout-breakpoint-large - 1) {
-  .hide, .hide-gt-sm, .hide-gt-md {
-    &:not(.show-gt-sm):not(.show-gt-md):not(.show-lg):not(.show) {
+  .#{bb-prefix()}hide, .#{bb-prefix()}hide-gt-sm, .#{bb-prefix()}hide-gt-md {
+    &:not(.#{bb-prefix()}show-gt-sm):not(.#{bb-prefix()}show-gt-md):not(.#{bb-prefix()}show-lg):not(.#{bb-prefix()}show) {
       display: none;
     }
   }
-  .hide-lg:not(.show-lg):not(.show) {
+  .#{bb-prefix()}hide-lg:not(.#{bb-prefix()}show-lg):not(.#{bb-prefix()}show) {
     display: none;
   }
   @include bb-flex-order-for-name(lg);
@@ -431,8 +433,8 @@
 
 // [4.1]
 @media (min-width: $bb-layout-breakpoint-large) {
-  .hide-gt-sm, .hide-gt-md, .hide-gt-lg, .hide {
-    &:not(.show-gt-sm):not(.show-gt-md):not(.show-gt-lg):not(.show) {
+  .#{bb-prefix()}hide-gt-sm, .#{bb-prefix()}hide-gt-md, .#{bb-prefix()}hide-gt-lg, .#{bb-prefix()}hide {
+    &:not(.#{bb-prefix()}show-gt-sm):not(.#{bb-prefix()}show-gt-md):not(.#{bb-prefix()}show-gt-lg):not(.#{bb-prefix()}show) {
       display: none;
     }
   }
