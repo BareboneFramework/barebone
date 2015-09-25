@@ -4,7 +4,7 @@
   "version": "0.0.3",
   "homepage": "https://github.com/BareboneFramework/barebone",
   "authors": [
-    "Tine Jozelj <mentos1386@outlook.com>"
+    "Tine Jozelj <mentos1386(at)outlook.com>"
   ],
   "sass": "sass/barebone.sass",
   "bugs": {
