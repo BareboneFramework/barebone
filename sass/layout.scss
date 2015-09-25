@@ -65,39 +65,25 @@
 }
 
 // [1] --------------------------
-.#{bb-prefix()}padding > .#{bb-prefix()}flex-xsm,
-.#{bb-prefix()}padding > .#{bb-prefix()}flex-sm {
-  padding: $bb-layout-gutter-width / 4;
+.#{bb-prefix()}padding {
+  padding: $bb-layout-gutter-width;
 }
 
-.#{bb-prefix()}padding,
-.#{bb-prefix()}padding > .#{bb-prefix()}flex,
-.#{bb-prefix()}padding > .#{bb-prefix()}flex-bt-sm,
-.#{bb-prefix()}padding > .#{bb-prefix()}flex-md {
-  padding: $bb-layout-gutter-width / 2;
-}
-
-.#{bb-prefix()}padding > .#{bb-prefix()}flex-bt-md,
-.#{bb-prefix()}padding > .#{bb-prefix()}flex-lg {
-  padding: $bb-layout-gutter-width / 1;
+@media (max-width: $bb-layout-breakpoint-medium) {
+  .#{bb-prefix()}padding {
+    padding: $bb-layout-gutter-width / 2;
+  }
 }
 
 // [2] --------------------------
-.#{bb-prefix()}margin > .#{bb-prefix()}flex-xsm,
-.#{bb-prefix()}margin > .#{bb-prefix()}flex-sm {
-  margin: $bb-layout-gutter-width / 4;
+.#{bb-prefix()}margin {
+  margin: $bb-layout-gutter-width;
 }
 
-.#{bb-prefix()}margin,
-.#{bb-prefix()}margin > .#{bb-prefix()}flex,
-.#{bb-prefix()}margin > .#{bb-prefix()}flex-bt-sm,
-.#{bb-prefix()}margin > .#{bb-prefix()}flex-md {
-  margin: $bb-layout-gutter-width / 2;
-}
-
-.#{bb-prefix()}margin > .#{bb-prefix()}flex-bt-md,
-.#{bb-prefix()}margin > .#{bb-prefix()}flex-lg {
-  margin: $bb-layout-gutter-width / 1;
+@media (max-width: $bb-layout-breakpoint-medium) {
+  .#{bb-prefix()}margin {
+    margin: $bb-layout-gutter-width / 2;
+  }
 }
 
 // ------------------------------
@@ -129,8 +115,8 @@
 //
 // ------------------------------
 
-// [1] --------------------------
-@media (max-width: $bb-layout-breakpoint-xsmall) {
+// [1] XSMALL--------------------
+@media (max-width: $bb-layout-breakpoint-xsmall - 1) {
   .#{bb-prefix()}hide, .#{bb-prefix()}hide-xsm, .#{bb-prefix()}hide-st-sm, .#{bb-prefix()}hide-st-md, .#{bb-prefix()}hide-st-lg {
     &:not(.#{bb-prefix()}show-xsm):not(.#{bb-prefix()}show-st-sm):not(.#{bb-prefix()}show-st-md):not(.#{bb-prefix()}show-st-lg):not(.#{bb-prefix()}show) {
       display: none;
@@ -145,7 +131,7 @@
 }
 
 // [1.1] ------------------------
-@media (min-width: $bb-layout-breakpoint-xsmall) {
+@media (min-width: $bb-layout-breakpoint-xsmall + 1) {
   @include bb-flex-order-for-name(bt-xsm);
   @include bb-align-for-name(bt-xsm);
   @include bb-layout-for-name(bt-xsm);
@@ -153,8 +139,8 @@
   @include bb-flex-properties-for-name(bt-xsm);
 }
 
-// [2] --------------------------
-@media (min-width: $bb-layout-breakpoint-xsmall) and (max-width: $bb-layout-breakpoint-small) {
+// [2] SMALL---------------------
+@media (min-width: $bb-layout-breakpoint-xsmall) and (max-width: $bb-layout-breakpoint-small - 1) {
   .#{bb-prefix()}hide, .#{bb-prefix()}hide-bt-xsm, .#{bb-prefix()}hide-st-md, .#{bb-prefix()}hide-st-lg {
     &:not(.#{bb-prefix()}show-bt-xsm):not(.#{bb-prefix()}show-sm):not(.#{bb-prefix()}show-st-md):not(.#{bb-prefix()}show-st-lg):not(.#{bb-prefix()}show) {
       display: none;
@@ -171,7 +157,7 @@
 }
 
 // [2.1] ------------------------
-@media (max-width: $bb-layout-breakpoint-small) {
+@media (max-width: $bb-layout-breakpoint-small - 1) {
   @include bb-flex-order-for-name(st-sm);
   @include bb-align-for-name(st-sm);
   @include bb-layout-for-name(st-sm);
@@ -180,7 +166,7 @@
 }
 
 // [2.2] ------------------------
-@media (min-width: $bb-layout-breakpoint-small) {
+@media (min-width: $bb-layout-breakpoint-small + 1) {
   @include bb-flex-order-for-name(bt-sm);
   @include bb-align-for-name(bt-sm);
   @include bb-layout-for-name(bt-sm);
@@ -188,8 +174,8 @@
   @include bb-flex-properties-for-name(bt-sm);
 }
 
-// [3] --------------------------
-@media (min-width: $bb-layout-breakpoint-small) and (max-width: $bb-layout-breakpoint-medium) {
+// [3] MEDIUM--------------------
+@media (min-width: $bb-layout-breakpoint-small) and (max-width: $bb-layout-breakpoint-medium - 1) {
   .#{bb-prefix()}hide, .#{bb-prefix()}hide-bt-xsm, .#{bb-prefix()}hide-bt-sm, .#{bb-prefix()}hide-st-lg {
     &:not(.#{bb-prefix()}show-bt-xsm):not(.#{bb-prefix()}show-bt-sm):not(.#{bb-prefix()}show-md):not(.#{bb-prefix()}show-st-lg):not(.#{bb-prefix()}show) {
       display: none;
@@ -206,7 +192,7 @@
 }
 
 // [3.1] ------------------------
-@media (max-width: $bb-layout-breakpoint-small) {
+@media (max-width: $bb-layout-breakpoint-small - 1) {
   @include bb-flex-order-for-name(st-md);
   @include bb-align-for-name(st-md);
   @include bb-layout-for-name(st-md);
@@ -215,7 +201,7 @@
 }
 
 // [3.2] ------------------------
-@media (min-width: $bb-layout-breakpoint-medium) {
+@media (min-width: $bb-layout-breakpoint-medium + 1) {
   @include bb-flex-order-for-name(bt-md);
   @include bb-align-for-name(bt-md);
   @include bb-layout-for-name(bt-md);
@@ -223,8 +209,8 @@
   @include bb-flex-properties-for-name(bt-md);
 }
 
-// [4] ------------------------
-@media (min-width: $bb-layout-breakpoint-medium) and (max-width: $bb-layout-breakpoint-large) {
+// [4] LARGE-------------------
+@media (min-width: $bb-layout-breakpoint-medium) and (max-width: $bb-layout-breakpoint-large - 1) {
   .#{bb-prefix()}hide, .#{bb-prefix()}hide-bt-sm, .#{bb-prefix()}hide-bt-md {
     &:not(.#{bb-prefix()}show-bt-xsm):not(.#{bb-prefix()}show-bt-sm):not(.#{bb-prefix()}show-bt-md):not(.#{bb-prefix()}show-lg):not(.#{bb-prefix()}show) {
       display: none;
@@ -241,7 +227,7 @@
 }
 
 // [4.1] ------------------------
-@media (max-width: $bb-layout-breakpoint-medium) {
+@media (max-width: $bb-layout-breakpoint-medium - 1) {
   @include bb-flex-order-for-name(st-lg);
   @include bb-align-for-name(st-lg);
   @include bb-layout-for-name(st-lg);
@@ -250,7 +236,7 @@
 }
 
 // [4.2] ------------------------
-@media (min-width: $bb-layout-breakpoint-large) {
+@media (min-width: $bb-layout-breakpoint-large + 1) {
   .#{bb-prefix()}hide-bt-sm, .#{bb-prefix()}hide-bt-md, .#{bb-prefix()}hide-bt-lg, .#{bb-prefix()}hide {
     &:not(.#{bb-prefix()}show-bt-xsm):not(.#{bb-prefix()}show-bt-sm):not(.#{bb-prefix()}show-bt-md):not(.#{bb-prefix()}show-bt-lg):not(.#{bb-prefix()}show) {
       display: none;
