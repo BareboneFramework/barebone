@@ -14,6 +14,18 @@
     "responsive",
     "web"
   ],
+  "dependencies": {
+    "font-awesome": "latest",
+    "modularized-normalize-scss": "latest",
+    "roboto-fontface": "latest",
+    "ionicons": "latest"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-cli": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-watch": "latest"
+  },
   "license": "MIT",
   "ignore": [
     "**/.*",

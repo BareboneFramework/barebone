@@ -39,23 +39,26 @@ $bb-github: "https://github.com/BareboneFramework/barebone";
 @import "typography";
 
 // ------------------------------
-// Import normalize.css
-// ------------------------------
-@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css);
-
-// ------------------------------
-// Import fonts
+// Import Dependencies
 //
-// [1] Roboto Material Design Font
-// [2] FontAwesome Icons
+// [1] Normalize.css
+// [2] Roboto Font Face
+// [3] Font Awesome Icons
+// [4] Ion Icons
 //
 // ------------------------------
 
-// [1]
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,500italic,400italic,700italic,300italic);
+// [1] Normalize.css
+@import '../../modularized-normalize-scss/normalize';
 
-// [2]
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+// [2] Roboto Font Face
+@import '../../roboto-fontface/css/roboto-fontface';
+
+// [3] Font Awesome Icons
+@import '../../font-awesome/scss/font-awesome';
+
+// [4] Ion Icons
+@import '../../ionicons/scss/ionicons';
 
 // ------------------------------
 // Framework wide
