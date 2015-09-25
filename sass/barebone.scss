@@ -43,22 +43,15 @@ $bb-github: "https://github.com/BareboneFramework/barebone";
 //
 // [1] Normalize.css
 // [2] Roboto Font Face
-// [3] Font Awesome Icons
-// [4] Ion Icons
 //
 // ------------------------------
 
+// NORMAL IMPORTS
 // [1] Normalize.css
 @import '../../modularized-normalize-scss/normalize';
 
 // [2] Roboto Font Face
 @import '../../roboto-fontface/css/roboto-fontface';
-
-// [3] Font Awesome Icons
-@import '../../font-awesome/scss/font-awesome';
-
-// [4] Ion Icons
-@import '../../ionicons/scss/ionicons';
 
 // ------------------------------
 // Framework wide

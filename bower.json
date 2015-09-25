@@ -15,10 +15,8 @@
     "web"
   ],
   "dependencies": {
-    "font-awesome": "latest",
     "modularized-normalize-scss": "latest",
-    "roboto-fontface": "latest",
-    "ionicons": "latest"
+    "roboto-fontface": "latest"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
