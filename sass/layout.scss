@@ -64,7 +64,7 @@
   min-height: 100%;
 }
 
-// [1]
+// [1] --------------------------
 .#{bb-prefix()}padding > .#{bb-prefix()}flex-xsm,
 .#{bb-prefix()}padding > .#{bb-prefix()}flex-sm {
   padding: $bb-layout-gutter-width / 4;
@@ -82,7 +82,7 @@
   padding: $bb-layout-gutter-width / 1;
 }
 
-// [2]
+// [2] --------------------------
 .#{bb-prefix()}margin > .#{bb-prefix()}flex-xsm,
 .#{bb-prefix()}margin > .#{bb-prefix()}flex-sm {
   margin: $bb-layout-gutter-width / 4;
@@ -129,7 +129,7 @@
 //
 // ------------------------------
 
-// [1]
+// [1] --------------------------
 @media (max-width: $bb-layout-breakpoint-xsmall) {
   .#{bb-prefix()}hide, .#{bb-prefix()}hide-xsm, .#{bb-prefix()}hide-st-sm, .#{bb-prefix()}hide-st-md, .#{bb-prefix()}hide-st-lg {
     &:not(.#{bb-prefix()}show-xsm):not(.#{bb-prefix()}show-st-sm):not(.#{bb-prefix()}show-st-md):not(.#{bb-prefix()}show-st-lg):not(.#{bb-prefix()}show) {
@@ -144,7 +144,7 @@
   @include bb-flex-properties-for-name(xsm);
 }
 
-// [1.1]
+// [1.1] ------------------------
 @media (min-width: $bb-layout-breakpoint-xsmall) {
   @include bb-flex-order-for-name(bt-xsm);
   @include bb-align-for-name(bt-xsm);
@@ -153,7 +153,7 @@
   @include bb-flex-properties-for-name(bt-xsm);
 }
 
-// [2]
+// [2] --------------------------
 @media (min-width: $bb-layout-breakpoint-xsmall) and (max-width: $bb-layout-breakpoint-small) {
   .#{bb-prefix()}hide, .#{bb-prefix()}hide-bt-xsm, .#{bb-prefix()}hide-st-md, .#{bb-prefix()}hide-st-lg {
     &:not(.#{bb-prefix()}show-bt-xsm):not(.#{bb-prefix()}show-sm):not(.#{bb-prefix()}show-st-md):not(.#{bb-prefix()}show-st-lg):not(.#{bb-prefix()}show) {
@@ -170,7 +170,7 @@
   @include bb-flex-properties-for-name(sm);
 }
 
-// [2.1]
+// [2.1] ------------------------
 @media (max-width: $bb-layout-breakpoint-small) {
   @include bb-flex-order-for-name(st-sm);
   @include bb-align-for-name(st-sm);
@@ -179,7 +179,7 @@
   @include bb-flex-properties-for-name(st-sm);
 }
 
-// [2.2]
+// [2.2] ------------------------
 @media (min-width: $bb-layout-breakpoint-small) {
   @include bb-flex-order-for-name(bt-sm);
   @include bb-align-for-name(bt-sm);
@@ -188,7 +188,7 @@
   @include bb-flex-properties-for-name(bt-sm);
 }
 
-// [3]
+// [3] --------------------------
 @media (min-width: $bb-layout-breakpoint-small) and (max-width: $bb-layout-breakpoint-medium) {
   .#{bb-prefix()}hide, .#{bb-prefix()}hide-bt-xsm, .#{bb-prefix()}hide-bt-sm, .#{bb-prefix()}hide-st-lg {
     &:not(.#{bb-prefix()}show-bt-xsm):not(.#{bb-prefix()}show-bt-sm):not(.#{bb-prefix()}show-md):not(.#{bb-prefix()}show-st-lg):not(.#{bb-prefix()}show) {
@@ -205,7 +205,7 @@
   @include bb-flex-properties-for-name(md);
 }
 
-// [3.1]
+// [3.1] ------------------------
 @media (max-width: $bb-layout-breakpoint-small) {
   @include bb-flex-order-for-name(st-md);
   @include bb-align-for-name(st-md);
@@ -214,7 +214,7 @@
   @include bb-flex-properties-for-name(st-md);
 }
 
-// [3.2]
+// [3.2] ------------------------
 @media (min-width: $bb-layout-breakpoint-medium) {
   @include bb-flex-order-for-name(bt-md);
   @include bb-align-for-name(bt-md);
@@ -223,7 +223,7 @@
   @include bb-flex-properties-for-name(bt-md);
 }
 
-// [4]
+// [4] ------------------------
 @media (min-width: $bb-layout-breakpoint-medium) and (max-width: $bb-layout-breakpoint-large) {
   .#{bb-prefix()}hide, .#{bb-prefix()}hide-bt-sm, .#{bb-prefix()}hide-bt-md {
     &:not(.#{bb-prefix()}show-bt-xsm):not(.#{bb-prefix()}show-bt-sm):not(.#{bb-prefix()}show-bt-md):not(.#{bb-prefix()}show-lg):not(.#{bb-prefix()}show) {
@@ -240,7 +240,7 @@
   @include bb-flex-properties-for-name(lg);
 }
 
-// [4.1]
+// [4.1] ------------------------
 @media (max-width: $bb-layout-breakpoint-medium) {
   @include bb-flex-order-for-name(st-lg);
   @include bb-align-for-name(st-lg);
@@ -249,7 +249,7 @@
   @include bb-flex-properties-for-name(st-lg);
 }
 
-// [4.2]
+// [4.2] ------------------------
 @media (min-width: $bb-layout-breakpoint-large) {
   .#{bb-prefix()}hide-bt-sm, .#{bb-prefix()}hide-bt-md, .#{bb-prefix()}hide-bt-lg, .#{bb-prefix()}hide {
     &:not(.#{bb-prefix()}show-bt-xsm):not(.#{bb-prefix()}show-bt-sm):not(.#{bb-prefix()}show-bt-md):not(.#{bb-prefix()}show-bt-lg):not(.#{bb-prefix()}show) {

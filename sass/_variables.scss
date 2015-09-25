@@ -23,7 +23,7 @@ $bb-text-color-scheme: "dark" !default;
 //
 // ------------------------------
 
-// [1]
+// [1] --------------------------
 $bb-font-family: Roboto, 'Helvetica Neue', sans-serif !default;
 
 // 10px = font-size: 62.5% at <html>
@@ -33,13 +33,13 @@ $bb-base-font-size: 10px !default;
   @return $multiplier * $bb-base-font-size
 }
 
-// [2]
+// [2] --------------------------
 $bb-display-4-font-size-base: bb-rem(11.20) !default;
 $bb-display-3-font-size-base: bb-rem(5.600) !default;
 $bb-display-2-font-size-base: bb-rem(4.500) !default;
 $bb-display-1-font-size-base: bb-rem(3.400) !default;
 
-// [3]
+// [3] --------------------------
 $bb-heading-1-font-size-base: bb-rem(3.600) !default;
 $bb-heading-2-font-size-base: bb-rem(3.000) !default;
 $bb-heading-3-font-size-base: bb-rem(2.400) !default;
@@ -47,7 +47,7 @@ $bb-heading-4-font-size-base: bb-rem(1.800) !default;
 $bb-heading-5-font-size-base: bb-rem(1.400) !default;
 $bb-heading-6-font-size-base: bb-rem(1.200) !default;
 
-// [4]
+// [4] --------------------------
 $bb-headline-font-size-base: bb-rem(2.400) !default;
 $bb-title-font-size-base: bb-rem(2.000) !default;
 $bb-subhead-font-size-base: bb-rem(1.600) !default;

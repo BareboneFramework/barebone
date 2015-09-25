@@ -9,7 +9,7 @@
 //
 // ------------------------------
 
-// [1]
+// [1] --------------------------
 @mixin bb-flex-order-for-name($suffix: null) {
   $selector: bb-prefix() + 'flex-order';
   @if $suffix != null {
@@ -48,7 +48,7 @@
   }
 }
 
-// [2]
+// [2] --------------------------
 @mixin bb-layout-for-name($name) {
   $name: bb-prefix() + $name;
 
@@ -73,7 +73,7 @@
   }
 }
 
-// [3]
+// [3] --------------------------
 @mixin bb-offset-for-name($name: null) {
   $offsetName: bb-prefix() + 'offset';
   @if $name != null {
@@ -94,7 +94,7 @@
   }
 }
 
-// [4]
+// [4] --------------------------
 @mixin bb-flex-properties-for-name($name: null) {
   $flexName: bb-prefix() + 'flex';
   @if $name != null {
@@ -129,7 +129,7 @@
   }
 }
 
-// [5]
+// [5] --------------------------
 @mixin bb-align-for-name($suffix: null) {
   $name: bb-prefix() + 'align';
   @if $suffix != null {
