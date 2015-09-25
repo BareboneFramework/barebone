@@ -24,7 +24,10 @@
 
 @function bb-color($color-name, $color-variant: "500", $color-pallet: $bb-colors) {
 
-  // TODO: Add check if $color-pallet exists
+  @if type-of($color-pallet) != "map" {
+    @error "Color pallet isnt a map!";
+  }
+
   $color: map-get($color-pallet, $color-name);
 
   // Try to get color

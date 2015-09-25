@@ -1,7 +1,7 @@
 {
   "name": "Barebone",
   "description": "Responsive framework for Frontend development written in SASS",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "homepage": "https://github.com/BareboneFramework/barebone",
   "authors": [
     "Tine Jozelj <mentos1386(at)outlook.com>"

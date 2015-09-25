@@ -7,7 +7,7 @@
 // ------------------------------
 
 // [1]
-$bb-version: "0.0.3";
+$bb-version: "0.1.0";
 
 // [2]
 $bb-github: "https://github.com/BareboneFramework/barebone";
@@ -24,10 +24,10 @@ $bb-github: "https://github.com/BareboneFramework/barebone";
 
 // NORMAL IMPORTS
 // [1] Normalize.css
-@import '../node_modules/modularized-normalize-scss/normalize';
+@import '../../modularized-normalize-scss/normalize';
 
 // [2] Roboto Font Face
-@import '../node_modules/roboto-fontface/css/roboto-fontface.css';
+@import '../../roboto-fontface/css/roboto-fontface.css';
 
 // ------------------------------
 // Framework Signature

@@ -1,12 +1,19 @@
 // ------------------------------
 // Colors
 //
-// - You can use "colorFunction($color-pallet)" mixin for custom color pallet
-//   but need same hierarchy as colors bellow
+// - You can use "bb-color($color-name, $color-variant: "500", $color-pallet: $bb-colors)" function for accessing custom color pallet
+//   as well, just change third parameter to map of custom colors. But they need to be same map pattern as colors bellow
 //
-//   'name': (
-//         'variant': value
-//    )
+//  $custom-colors: (
+//    'name-1': (
+//      'variant-1': #00000
+//      'variant-2': #f0f0f
+//      'variant-3': #00fff
+//    ),
+//    'name-2': (
+//      'variant-1': #fffff
+//    ),
+//  );
 //
 // ------------------------------
 $bb-colors: (
