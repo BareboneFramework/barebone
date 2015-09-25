@@ -103,29 +103,22 @@
 
   .#{$flexName} {
     box-sizing: border-box;
-    flex: 1;
-    display: flex;
+    @include bb-flex()
   }
 
   // (0-20) * 5 = 0-100%
   @for $i from 0 through 20 {
     .#{$flexName}-#{$i * 5} {
-      flex: 0 0 #{$i * 5 + '%'};
-      display: flex;
-      max-width: #{$i * 5 + '%'};
+      @include bb-flex($i * 5)
     }
   }
 
   .#{$flexName}-33, .#{$flexName}-34 {
-    flex: 0 0 34%;
-    display: flex;
-    max-width: 34%;
+    @include bb-flex(34)
   }
 
   .#{$flexName}-66, .#{$flexName}-67 {
-    flex: 0 0 66%;
-    display: flex;
-    max-width: 66%;
+    @include bb-flex(66)
   }
 }
 
@@ -206,4 +199,19 @@
   .#{$name}-space-around-end {
     align-items: flex-end;
   }
+}
+
+// ------------------------------
+// Flex mixin
+// ------------------------------
+
+@mixin bb-flex($size: null) {
+
+  @if $size == null {
+    flex: 1;
+  } @else {
+    flex: 0 0 #{$size + '%'};
+    max-width: #{$size + '%'};
+  }
+  display: flex;
 }
