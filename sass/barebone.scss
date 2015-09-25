@@ -13,7 +13,24 @@ $bb-version: "0.0.3";
 $bb-github: "https://github.com/BareboneFramework/barebone";
 
 // ------------------------------
-// Framework Signature (Please don't remove it)
+// Import Dependencies
+//
+// [1] Normalize.css
+// [2] Roboto Font Face
+//
+// - If you are developer change from "../../YYY" to "../node_modules/YYY"
+//
+// ------------------------------
+
+// NORMAL IMPORTS
+// [1] Normalize.css
+@import '../node_modules/modularized-normalize-scss/normalize';
+
+// [2] Roboto Font Face
+@import '../node_modules/roboto-fontface/css/roboto-fontface.css';
+
+// ------------------------------
+// Framework Signature
 // ------------------------------
 
 /*
@@ -37,21 +54,6 @@ $bb-github: "https://github.com/BareboneFramework/barebone";
 @import "layout";
 // Typography
 @import "typography";
-
-// ------------------------------
-// Import Dependencies
-//
-// [1] Normalize.css
-// [2] Roboto Font Face
-//
-// ------------------------------
-
-// NORMAL IMPORTS
-// [1] Normalize.css
-@import '../../modularized-normalize-scss/normalize';
-
-// [2] Roboto Font Face
-@import '../../roboto-fontface/css/roboto-fontface';
 
 // ------------------------------
 // Framework wide
