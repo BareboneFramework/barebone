@@ -67,9 +67,19 @@
     -webkit-flex-direction: column;
   }
 
+  .#{$name}-column-reverse {
+    flex-direction: column-reverse;
+    -webkit-flex-direction: column-reverse;
+  }
+
   .#{$name}-row {
     flex-direction: row;
     -webkit-flex-direction: row;
+  }
+
+  .#{$name}-row-reverse {
+    flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
   }
 }
 
@@ -97,8 +107,10 @@
 // [4] --------------------------
 @mixin bb-flex-properties-for-name($name: null) {
   $flexName: bb-prefix() + 'flex';
+  $layoutName: bb-prefix(true);
   @if $name != null {
     $flexName: bb-prefix() + 'flex-#{$name}';
+    $layoutName: bb-prefix() + $name;
   }
 
   .#{$flexName} {
@@ -106,10 +118,39 @@
     @include bb-flex()
   }
 
+  @if ($flexName == bb-prefix() + 'flex') {
+    .#{$flexName}, .#{$flexName}-initial {
+      box-sizing: border-box;
+      flex: 0 1 auto;
+    }
+
+    .#{$flexName}-1 {
+      box-sizing: border-box;
+      flex: 1 1 0%;
+    }
+
+    .#{$flexName}-auto {
+      box-sizing: border-box;
+      flex: 1 1 auto;
+    }
+  }
+
   // (0-20) * 5 = 0-100%
   @for $i from 0 through 20 {
     .#{$flexName}-#{$i * 5} {
       @include bb-flex($i * 5)
+    }
+    // Set width/height for row
+    .#{$layoutName}-row > *,
+    .#{$layoutName}-row-reverse > * {
+      max-width: #{$i * 5 + '%'};
+      max-height: 100%;
+    }
+    // Set height/width for column
+    .#{$layoutName}-column > *,
+    .#{$layoutName}-column-reverse > * {
+      max-height: #{$i * 5 + '%'};
+      max-width: 100%;
     }
   }
 
@@ -143,6 +184,14 @@
     justify-content: center;
   }
 
+  // Main Axis Start
+  .#{$name}-start,
+  .#{$name}-start-center,
+  .#{$name}-start-start,
+  .#{$name}-start-end {
+    justify-content: flex-start;
+  }
+
   // Main Axis End
   .#{$name}-end,
   .#{$name}-end-center,
@@ -173,6 +222,15 @@
   // stretch is the default for align-items
   // ------------------------------
 
+  // Cross Axis Stretch
+  .#{$name}-center-stretch,
+  .#{$name}-start-stretch,
+  .#{$name}-end-stretch,
+  .#{$name}-space-between-stretch,
+  .#{$name}-space-around-stretch {
+    align-items: stretch;
+  }
+
   // Cross Axis Center
   .#{$name}-center-center,
   .#{$name}-start-center,
@@ -199,6 +257,26 @@
   .#{$name}-space-around-end {
     align-items: flex-end;
   }
+
+  // Align Content
+  .#{$name}-content-stretch {
+    align-content: stretch;
+  }
+  .#{$name}-content-start {
+    align-content: flex-start;
+  }
+  .#{$name}-content-end {
+    align-content: flex-end;
+  }
+  .#{$name}-content-center {
+    align-content: center;
+  }
+  .#{$name}-content-space-around {
+    align-content: space-around;
+  }
+  .#{$name}-content-space-between {
+    align-content: space-between;
+  }
 }
 
 // ------------------------------
@@ -211,6 +289,8 @@
     flex: 1;
   } @else {
     flex: 0 0 #{$size + '%'};
+    // Set max-width, this is to force it to behave as child of "row" even if "row" isn't set to parent element
+    // It is overwritten if parent element has "column" class
     max-width: #{$size + '%'};
   }
   display: flex;

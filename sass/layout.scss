@@ -49,9 +49,19 @@
   -webkit-flex-direction: column;
 }
 
+.#{bb-prefix()}column-reverse {
+  flex-direction: column-reverse;
+  -webkit-flex-direction: column-reverse;
+}
+
 .#{bb-prefix()}row {
   flex-direction: row;
   -webkit-flex-direction: row;
+}
+
+.#{bb-prefix()}row-reverse {
+  flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
 }
 
 .#{bb-prefix()}wrap {

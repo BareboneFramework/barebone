@@ -9,8 +9,12 @@
 //
 // ------------------------------
 
-@function bb-prefix() {
-  @return $bb-framework-prefix + "-";
+@function bb-prefix($no-dash: false) {
+  @if $no-dash {
+    @return $bb-framework-prefix;
+  } @else {
+    @return $bb-framework-prefix + "-";
+  }
 }
 
 // ------------------------------
